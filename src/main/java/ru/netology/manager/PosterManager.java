@@ -7,14 +7,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class PosterManager {
+    private Movie[] movie = new Movie[0];
     private int countMovie = 10;
 
     public PosterManager(int countMovie) {
 
         this.countMovie = countMovie;
     }
-
-    private Movie[] movie = new Movie[0];
 
     public void add(Movie mov) {
 

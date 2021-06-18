@@ -39,6 +39,27 @@ public class PosterManagerTest {
 
         assertArrayEquals(expected, actual);
     }
+    @Test
+    public void shouldShowPosterDefaultAfterMax() {
+        PosterManager poster = new PosterManager();
+
+        poster.add(first);
+        poster.add(second);
+        poster.add(third);
+        poster.add(fourth);
+        poster.add(fifth);
+        poster.add(sixth);
+        poster.add(seventh);
+        poster.add(eighth);
+        poster.add(ninth);
+        poster.add(tenth);
+        poster.add(eleventh);
+
+        Movie[] actual = poster.getAll();
+        Movie[] expected = new Movie[]{tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
+
+        assertArrayEquals(expected, actual);
+    }
 
     @Test
     public void shouldShowPosterDefaultMin() {
@@ -69,6 +90,27 @@ public class PosterManagerTest {
 
         Movie[] actual = poster.getAll();
         Movie[] expected = new Movie[]{eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
+
+        assertArrayEquals(expected, actual);
+    }
+    @Test
+    public void shouldShowPosterSetCountAfterMax() {
+        PosterManager poster = new PosterManager(10);
+
+        poster.add(first);
+        poster.add(second);
+        poster.add(third);
+        poster.add(fourth);
+        poster.add(fifth);
+        poster.add(sixth);
+        poster.add(seventh);
+        poster.add(eighth);
+        poster.add(ninth);
+        poster.add(tenth);
+        poster.add(eleventh);
+
+        Movie[] actual = poster.getAll();
+        Movie[] expected = new Movie[]{tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
 
         assertArrayEquals(expected, actual);
     }
