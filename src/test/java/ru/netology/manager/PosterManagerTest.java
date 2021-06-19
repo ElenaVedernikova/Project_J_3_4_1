@@ -56,7 +56,7 @@ public class PosterManagerTest {
         poster.add(eleventh);
 
         Movie[] actual = poster.getAll();
-        Movie[] expected = new Movie[]{tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
+        Movie[] expected = new Movie[]{eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second};
 
         assertArrayEquals(expected, actual);
     }
@@ -110,7 +110,7 @@ public class PosterManagerTest {
         poster.add(eleventh);
 
         Movie[] actual = poster.getAll();
-        Movie[] expected = new Movie[]{tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
+        Movie[] expected = new Movie[]{eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second};
 
         assertArrayEquals(expected, actual);
     }
